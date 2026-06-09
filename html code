@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carbon Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Carbon Calculator</h1>
+    <p>Estimate your household CO₂ emissions and get tips to reduce them.</p>
+
+    <form id="carbonForm">
+      <label>Monthly Electricity Use (kWh)
+        <input type="number" id="electricity" placeholder="e.g., 250" required />
+      </label>
+
+      <label>Monthly Travel Distance (km)
+        <input type="number" id="travel" placeholder="e.g., 400" required />
+      </label>
+
+      <label>Diet Type
+        <select id="diet">
+          <option value="veg">Vegetarian</option>
+          <option value="mixed">Mixed</option>
+          <option value="nonveg">Non-Vegetarian</option>
+        </select>
+      </label>
+
+      <button type="submit">Calculate Emissions</button>
+    </form>
+
+    <div id="results" class="hidden">
+      <h2>Total CO₂ Emissions per Year:</h2>
+      <p id="total"></p>
+      <div id="tips"></div>
+      <div id="chart"></div>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
